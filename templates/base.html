@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | Sentiment Analyser</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>{% block style %}{% endblock style %}</style>
+    <script>{% block scripts %}{% endblock scripts %}</script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home" style="padding-left: 10px;">Sentiment Analyser</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="home"><span class="sr-only">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="report">Database Records</a></li>
+                <li class="nav-item"><a class="nav-link" href="admin">Admin</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"></a></li>
+              </ul>
+            </div>
+        </nav><br>
+        <h1 style="text-align: center;">Sentiment Analyser</h1><br><br>
+        {% block body %}{% endblock body %}<br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

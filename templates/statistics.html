@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Statistics{% endblock title %}
+
+{% block style %}
+    #dataset_table{
+        border: 2px solid red;
+    }
+{% endblock style %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block body %}
+<center>
+    <h3>Tesla.csv Dataset</h3>
+    <iframe src="static/dataset_html.html" title="Dataset" style="width: 56%; height: 195px;"></iframe><br><br><br>
+
+    <h3>Dataset Description</h3>
+    <iframe src="static/dataset_description.html" title="Dataset Description" style="width: 56%; height: 250px;"></iframe><br><br>
+    
+    <h3>Cleaned Dataset</h3>
+    <iframe src="static/cleaned_dataset_html.html" title="Cleaned Dataset" style="width: 56%; height: 195px;"></iframe><br><br><br>
+
+    <div class="mb-3 row">
+        <div class="mb-3 col-6">
+            <h3>X_Train</h3>
+            <iframe src="static/x_train.html" title="X Train Dataset" style="width: 91%; height: 197px;"></iframe>
+        </div>
+
+        <div class="mb-3 col-6">
+            <h3>Y_Train</h3>
+            <iframe src="static/y_train.html" title="Y Train Dataset" style="width: 28%; height: 197px;"></iframe>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <div class="mb-3 col-6">
+            <h3>X_Test</h3>
+            <iframe src="static/x_test.html" title="X Test Dataset" style="width: 91%; height: 197px;"></iframe>
+        </div>
+
+        <div class="mb-3 col-6">
+            <h3>Y_Test</h3>
+            <iframe src="static/y_test.html" title="Y Test Dataset" style="width: 28%; height: 197px;"></iframe>
+        </div>
+    </div><br><br>
+    
+    <h3>Model Evaluation</h3>
+    <iframe src="static/model_evaluation.html" title="Model Evaluation" style="width: 56%; height: 195px;"></iframe><br><br><br>
+</center>
+{% endblock body %}

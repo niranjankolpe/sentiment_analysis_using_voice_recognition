@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Report{% endblock title %}
+
+{% block style %}{% endblock style %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block body %}
+<center>
+  <h2>Database Records</h2><br>
+  <table class="table">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Question</th>
+          <th>Input</th>
+          <th>Prediction</th>
+          <th>Date Time</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for row in data %}
+        <tr>
+          <td>{{row.id}}</td>
+          <td>{{row.question}}</td>
+          <td>{{row.audio_input}}</td>
+          <td>{{row.prediction}}</td>
+          <td>{{row.date_time}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+</center>
+{% endblock body %}

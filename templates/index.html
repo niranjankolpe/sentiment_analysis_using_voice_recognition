@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block style %}{% endblock style %}
+
+{% block scripts %}{% endblock scripts %}
+
+{% block body %}
+<form action="result" method="post">
+    {% csrf_token %}
+
+    <!-- <label for="text_input" class="form-label">Enter text:</label>
+    <input type="text" class="form-control" name="text_input" placeholder="e.g. Hello, I am very happy and want to give treats." required><br> -->
+    
+    <center><br>
+        <h2>Play the audio and answer the question asked:</h2><br>
+        <input type="submit" class="form-control" value="Play" style="background-color: blueviolet; color: white; width: 20%;">
+    </center>
+</form>
+{% endblock body %}
