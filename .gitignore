@@ -1,0 +1,3 @@
+venv/
+static/django_joblib_sentimental_model
+static/django_pickle_sentimental_model
